@@ -19,15 +19,16 @@ porta = 8729
 s.bind((servidor, porta))
 s.listen(10)  # ouvindo as conexoes
 
+dict_candidatos = {
+    "Caio": 0,
+    "Leandro": 0,
+    "Nulos": 0,
+    "Brancos": 0
+}
+
 
 def trata_conn(conn, cliente):
     while True:
-        dict_candidatos = {
-            "Caio": 0,
-            "Leandro": 0,
-            "Nulos": 0,
-            "Brancos": 0
-        }
         data = conn.recv(4096)
         if data == b'':
             break
