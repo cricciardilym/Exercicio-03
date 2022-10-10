@@ -1,3 +1,13 @@
+"""
+O servidor deverá ser implementado prevendo a possibilidade de diversas conexões simultâneas. 
+Para tal, deve utilizar uma thread para cada conexão.
+Para cada conexão, o servidor deverá aguardar a mensagem 1, enviar a mensagem 2 com os 
+candidatos previamente configurados no servidor, aguardar a mensagem 3, somar os votos 
+enviados àqueles que constam em sua base e retornar essa totalização por meio da mensagem 4.
+A porta a ser utilizada pelo servidor será 8729.
+A cada 3 urnas apuradas, o servidor deverá imprimir a totalização na tela. 
+Este procedimento deve ser independente da execução do resto do servidor.
+"""
 from socket import *
 from threading import *
 
